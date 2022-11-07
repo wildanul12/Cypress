@@ -1,0 +1,54 @@
+cy.url('https://opensource-demo.orangehrmlive.com/').should('contains', 'demo')
+script di atas bagian tulisan demo dilihatnya darimana dan maksudnya apa ?
+
+cy.get('h2').should('be.visible')
+jika tidak ada h2 atau sejenisnya bagaimana ?
+
+
+/// <reference types="cypress" />
+
+describe('login curn positive flow', () => {
+
+  it('Verify login when entering valid username and password', () => {
+    cy.visit('https://katalon-demo-cura.herokuapp.com/')
+    cy.url('https://katalon-demo-cura.herokuapp.com/').should('contains', 'demo')
+  
+    cy.contains('Make Appointment').should('be.visible')
+    cy.get('#btn-make-appointment').click()
+  
+    cy.get(':nth-child(2) > .oxd-input-group > :nth-child(2) > .oxd-input').type('Admin').should('be.visible')
+    cy.get(':nth-child(3) > .oxd-input-group > :nth-child(2) > .oxd-input').type('admin123').should('be.visible')
+  
+    cy.get('.oxd-button').click()
+  
+    cy.get('.oxd-text--h5').should('be.visible')
+  
+  })
+  
+  })
+
+
+
+1. positive atau sukses
+klik forgot your password
+masukan username
+klik reset password
+tampil reset password link sent successfully
+
+2. Negative atau gagal
+klik forgot your password
+kosongkan username
+klik reset password
+tampil required harus isi username
+
+3. positive
+klik cancel
+kembali ke menu login
+
+4. positive
+klik link OrangeHRM. Inc.
+Masuk ke https://www.orangehrm.com/
+
+Setelah login di orangeHRM, 
+untuk Search bagian Employee Name dan Supervisor Name Harus di perbaiki
+atau tambahkan Note

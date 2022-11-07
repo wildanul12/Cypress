@@ -1,0 +1,41 @@
+test case id	= id kasus uji
+functional test	= tes fungsional
+test scenario	= skenario pengujian
+positive/negative	= -
+precondition	= prasyarat
+step			= langkah-langkah yg akan di lakukan
+test data		= testing data/input data
+expected		= Yang diharapkan
+actual		= Sebenarnya
+passed / failed	= hasil sukses / gagal
+
+---------------------------------------------------------------------------------------------
+
+test case id	= PIM_02
+functional test	= Employee List
+test scenario	= list of employees with unfilled fields
+positive/negative	= Negative
+precondition	= Already execute LOGIN_01
+step			= 
+	1. Click Employee Name and enter a name	
+	2. Click Employee ID and enter id	
+	3. Click Employee Status and enter status	
+	4. Click Include and select Current Employees Only	
+	5. Click Supervisor Name and enter a name	
+	6. Click Job Title and select Account Assistant	
+	7. Click Sub Unit and select Finance	
+	8. Click Search	
+
+test data		= 
+	Employee Name = Cassidy Hope
+	Employee ID = 0046
+	Employee Status = Part-Time Contract
+	Include = Current Employees Only
+	Supervisor Name = Odis Adalwin
+	Job Title = IT Manager
+	Sub Unit = TechOps
+
+expected		= The data you are looking for should appear "Data must be valid"
+actual		= The data you are looking for does not appear all
+the data you are looking for appears and matches
+passed / failed	= Passed
